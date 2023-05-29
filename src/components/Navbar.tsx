@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
-import { close, logo, menu } from '../assets'
-import { navLinks } from '../constants'
-import { styles } from '../styles'
+import { close, logo, menu } from "../assets";
+import { navLinks } from "../constants";
+import { styles } from "../styles";
 
 const Navbar = () => {
-  const [active, setActive] = useState("")
+  const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -18,12 +18,13 @@ const Navbar = () => {
       } else {
         setScrolled(false);
       }
-    }
+    };
 
     window.addEventListener("scroll", handleScroll);
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [])
+  }, []);
+
   return (
     <nav
       className={`${styles.paddingX
@@ -40,6 +41,10 @@ const Navbar = () => {
           }}
         >
           <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <p className='text-white text-[18px] font-bold cursor-pointer flex '>
+            Adrian &nbsp;
+            <span className='sm:block hidden'> | JavaScript Mastery</span>
+          </p>
         </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
@@ -87,6 +92,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
