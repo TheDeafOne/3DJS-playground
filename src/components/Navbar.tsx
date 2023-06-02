@@ -31,7 +31,7 @@ const Navbar = () => {
         } w-full flex items-center py-5 fixed top-0 z-20 ${scrolled ? "bg-primary" : "bg-transparent"
         }`}
     >
-      <div className='w-full flex justify-between items-center max-w-7xl mx-auto'>
+      <div className='w-full flex justify-between items-center max-w-7xl'>
         <Link
           to='/'
           className='flex items-center gap-2'
@@ -40,7 +40,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          <img src={logo} alt='logo' className='w-9 h-9 object-contain' />
+          <img src={logo} alt='logo' className='w-10 h-10 object-contain' />
         </Link>
 
         <ul className='list-none hidden sm:flex flex-row gap-10'>
